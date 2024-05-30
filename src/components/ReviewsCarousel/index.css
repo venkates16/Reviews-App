@@ -1,0 +1,38 @@
+/* Write your code here */
+
+.container {
+  background-image: linear-gradient(#5ab2ff, red);
+  height: 100vh;
+  padding: 20px;
+}
+
+.review {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+.description {
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.right {
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+  align-self: center;
+}
+.profile {
+  text-align: center;
+}
