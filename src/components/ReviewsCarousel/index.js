@@ -9,9 +9,9 @@ class ReviewsCarousel extends Component {
   }
 
   clickLeft = () => {
-    let {reviewsList} = this.props
+    const {reviewsList} = this.props
     console.log(reviewsList.length)
-    let {count} = this.state
+    const {count} = this.state
 
     if (count <= reviewsList.length - 1 && count !== 0) {
       this.setState(each => {
@@ -27,9 +27,9 @@ class ReviewsCarousel extends Component {
   }
 
   clickRight = () => {
-    let {reviewsList} = this.props
+    const {reviewsList} = this.props
     console.log(reviewsList.length)
-    let {count} = this.state
+    const {count} = this.state
     if (count < reviewsList.length - 1) {
       this.setState(each => {
         console.log(count)
@@ -41,23 +41,22 @@ class ReviewsCarousel extends Component {
   }
 
   render() {
-    let {count} = this.state
-    let {reviewsList} = this.props
-    let {imgUrl, companyName, description, username} = reviewsList[count]
+    const {count} = this.state
+    const {reviewsList} = this.props
+    const {imgUrl, companyName, description, username} = reviewsList[count]
 
     return (
       <div className="container">
         <div className="card">
-          <button testid="leftArrow">
+          <button data-testid="leftArrow">
             <img
               onClick={this.clickLeft}
               className="left"
               src="https://assets.ccbp.in/frontend/react-js/left-arrow-img.png"
               alt="left arrow"
             />
-          </button> 
+          </button>
 
-          
           <div className="profile">
             <h1>Reviews</h1>
             <img className="review" src={imgUrl} alt={username} />
@@ -65,7 +64,7 @@ class ReviewsCarousel extends Component {
             <p>{companyName}</p>
             <p className="description">{description}</p>
           </div>
-          <button testid="rightArrow">
+          <button data-testid="leftArrow">
             <img
               onClick={this.clickRight}
               src="https://assets.ccbp.in/frontend/react-js/right-arrow-img.png"
